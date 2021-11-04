@@ -30,7 +30,7 @@ np.random.seed(0)
 #checking for NaN values
 #print(data.isnull().sum()) #no null values
 
-data['hour'] = data['timestamp'].apply(lambda row: row.split(':')[0][-2:]) #Addition of feature
+data['hour'] = data['timestamp'].apply(lambda row: row.split(':')[0][-2:]) #Extraction of feature
 
 X = data.drop(['cnt','timestamp'],axis=1)  # splitting the feature value from csv
 y = data['cnt']                       # splitting the target values from csv
@@ -94,7 +94,6 @@ num_vars = ['t1t2','hum','wind_speed']
 
 tree_classifiers = {
   "Decision Tree": DecisionTreeRegressor(),
-  "Extra Trees":   ExtraTreesRegressor(n_estimators=100),
   "Random Forest": RandomForestRegressor(n_estimators=100),
   "AdaBoost":      AdaBoostRegressor(n_estimators=100),
   "Skl GBM":       GradientBoostingRegressor(n_estimators=100),
