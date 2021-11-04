@@ -4,6 +4,7 @@ import pandas   as pd
 import seaborn  as sb
 import matplotlib.pyplot as plt
 import sklearn  as skl
+
 import time
 
 from sklearn import pipeline      # Pipeline
@@ -163,7 +164,7 @@ results = pd.DataFrame({'Model': [], 'MSE': [], 'MAB': [], " % error": [], 'Time
 for model_name, model in tree_classifiers.items():
     
     start_time = time.time()
-    model.fit(x_train, y_train)
+    model.fit(x_train, y_train.ravel())
     total_time = time.time() - start_time
         
     pred = model.predict(x_val)
