@@ -72,15 +72,21 @@ def enhancement(train,deviation):
             
         return gen_data
 
+#print(X.head())
+#print(y.head())
+
 X_new = enhancement(X_train,8).sample(X_train.shape[0]//4)
 
 
-X_train = pd.concat([X_train, X_new.drop(['cnt'], axis=1 ) ])
-y_train = pd.concat([y_train, X_new['cnt'] ])
+X_train = pd.concat([X_train, X_new.drop(['cnt'], axis=1 ) ]) # merge the new x values in original X_train
+y_train = pd.concat([y_train, X_new['cnt'] ])                   # merge the new y values in original y_train
 
-X_train['t1t2'] = (X_train['t1']+X_train['t2'])/2
-X_test['t1t2'] = (X_test['t1']+X_test['t2'])/2
+X_train['t1t2'] = (X_train['t1']+X_train['t2'])/2  # mean of actual temperature t1 and feels like t2
+X_test['t1t2'] = (X_test['t1']+X_test['t2'])/2      # mean of actual temperature t1 and feels like t2
 X_train, X_test = X_train.drop(['t1','t2'], axis=1), X_test.drop(['t1','t2'], axis=1)    
+
+# print(X_train.head())
+# print(X_test.head())
 
 cat_vars = ['season','is_weekend','is_holiday','hour','weather_code']
 num_vars = ['t1t2','hum','wind_speed']
