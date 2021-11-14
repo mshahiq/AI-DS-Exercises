@@ -1,9 +1,9 @@
 import pandas as pd
-from sklearn.preprocessing import OrdinalEncoder
+from sklearn.preprocessing import OrdinalEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.compose import ColumnTransformer
 
-hello = "<3"
+
 
 def get_data(pth):
 
@@ -15,4 +15,9 @@ def get_data(pth):
 
     x_train = ct.fit_transform(x_train)
     x_test = ct.transform(x_test)
-    return x_train, x_test, y_train, y_test
+
+    scaler = StandardScaler()
+    x_train_scaled = scaler.fit_transform(x_train)
+    x_test_scaled = scaler.fit_transform(x_test)
+
+    return x_train_scaled, x_test_scaled, y_train, y_test, ct, scaler
