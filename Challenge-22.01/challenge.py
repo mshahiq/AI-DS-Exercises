@@ -18,4 +18,8 @@ def divisibi(array):
             
             return School
 
-        return array
+        
+
+a = divisibi(([1,2,3,4,5,30]))
+
+print(a)
