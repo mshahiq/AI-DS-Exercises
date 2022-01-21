@@ -1,6 +1,7 @@
 def print_me(array):
 
     for x in array: 
+        
         if x == 3:
             array.remove(x)
             array.insert((x-1),"Strive")
