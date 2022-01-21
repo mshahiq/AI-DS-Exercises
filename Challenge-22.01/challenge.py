@@ -16,4 +16,4 @@ def print_me(array):
     return array
 
     
-print(print_me(([1,2,3,5,10,30])))
+print(print_me(([1,2,3,5,30])))
