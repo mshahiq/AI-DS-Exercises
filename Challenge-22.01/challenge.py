@@ -7,7 +7,7 @@ def print_me(array):
 
         elif x == 5:
             array.remove(x)
-            array.insert((x-2),"School"s)
+            array.insert((x-2),"School")
 
         elif x == 30:
             array.remove(x)
