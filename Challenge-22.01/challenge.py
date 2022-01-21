@@ -1,17 +1,20 @@
 def print_me(array):
 
     for x in array: 
-        if x == 3:
+        
+        if x%3 == 0 and x%5 == 0:
+            array.remove(x)
+            array.insert((x-3),"Strive School")
+
+        elif x%3 == 0:
             array.remove(x)
             array.insert((x-1),"Strive")
 
-        elif x == 5:
+        elif x%5 == 0:
             array.remove(x)
             array.insert((x-2),"School")
 
-        elif x == 15:
-            array.remove(x)
-            array.insert((x-3),"Strive School")
+
         
     return array
 
