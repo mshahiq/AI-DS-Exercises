@@ -9,11 +9,11 @@ def print_me(array):
             array.remove(x)
             array.insert((x-2),"School")
 
-        elif x == 30:
+        elif x == 15:
             array.remove(x)
             array.insert((x-3),"Strive School")
         
     return array
 
     
-print(print_me(([1,2,3,5,30])))
+print(print_me(([1,2,3,5,15])))
