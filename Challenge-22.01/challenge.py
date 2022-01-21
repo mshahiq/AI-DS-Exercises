@@ -12,10 +12,7 @@ def print_me(array):
 
         elif x%5 == 0:
             array.remove(x)
-            array.insert((x-2),"School")
-
-
-        
+            array.insert((x-2),"School")       
     return array
 
     
