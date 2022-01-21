@@ -1,25 +1,19 @@
-def divisibi(array):
-    
-    Strive_School = "Strive School"
-    Strive        = "Strive"
-    School        = "School"
+def print_me(array):
 
-    for number in array:
+    for x in array: 
+        if x == 3:
+            array.remove(x)
+            array.insert((x-1),"Strive")
 
-        if((number%3==0) & (number%5==0)):
-            
-            return Strive_School
+        elif x == 5:
+            array.remove(x)
+            array.insert((x-2),"School")
 
-        elif number % 3 == 0:
-            
-            return Strive
-
-        elif number % 5 == 0:
-            
-            return School
-
+        elif x == 30:
+            array.remove(x)
+            array.insert((x-3),"Strive School")
         
+    return array
 
-a = divisibi(([1,2,3,4,5,30]))
-
-print(a)
+    
+print(print_me(([1,2,3,5,10,15,30])))
