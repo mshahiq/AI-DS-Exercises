@@ -1,23 +1,13 @@
-def find_spy(np, list_pairs):
-    for pd in list_pairs:
 
-        if (np <= 0) or (len(list_pairs) > np) or (len(pd)!=2):
-            return print("-1")
+def remove_duplicates(list_nu):
+    for single_digit in list_nu:
+        if list_nu.count(single_digit) == 1:
+            print(single_digit)
 
-        else:
-            # #print(list_pairs)
-            # for pd in list_pairs:
+# list_nu = [1,1,2,2,3,3,4,4,5]
+list_nu = [1,2,3,4,1,3,4]
 
-            # for sin_num in list(pd):
-            #     return print(sin_num)
+remove_duplicates(list_nu)
 
-            # first = pd[0]
-            # second = pd[1]
-            # print(first,second)
 
-            if pd[0]<pd[1]:
-                print(pd[0])
-            else:
-                print(pd[1])
 
-find_spy(3,([[1, 2], [1, 3], [2, 3]]))
