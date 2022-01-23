@@ -5,7 +5,7 @@ def remove_duplicates(list_nu):
 
         if list_nu.count(single_digit) == 1:
 
-            print(single_digit)
+            return print(single_digit)
 
 
 # list_nu = [1,1,2,2,3,3,4,4,5]
