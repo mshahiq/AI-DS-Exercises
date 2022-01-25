@@ -63,4 +63,5 @@ class list_folder_path:
 
 
 det_file_path = list_folder_path('images')
+
 det_file_path.image_path()
