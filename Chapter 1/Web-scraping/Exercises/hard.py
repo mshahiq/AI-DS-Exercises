@@ -1,4 +1,3 @@
-import selenium
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
@@ -26,7 +25,6 @@ sleep(7)
 
 driver.find_element_by_css_selector('#truste-consent-button').click()
 sleep(5)
-
 
 for i in range(1,11):
     
